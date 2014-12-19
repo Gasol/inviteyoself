@@ -15,7 +15,7 @@
 
 (defn ensure-unique-email [email]
   (if (not (invite/unique? email))
-    (throw+ "You've already submitted an invite recently!")
+    (throw+ "邀請函在路上了，請靜待片刻")
     email))
 
 (defform invite-form {}
