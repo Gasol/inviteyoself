@@ -23,7 +23,6 @@
 
 (defn -main [& args]
   ; clean up folks already invited
-  (invite/delete-all-invited)
   (if (> (count (invite/all-not-invited invite-limit)) 0)
     (let [not-invited (invite/all-not-invited invite-limit)
           status-code (run-inviteyoself-automator
