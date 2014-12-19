@@ -1,6 +1,6 @@
 {% extends "templates/base.html" %}
 {% block content %}
-<p>This slack team has open invites! Invite yoself!</p>
+<p>自己的邀請函自己寄，<a href="https://phptw.slack.com/">PHP Taiwan 的 slack 群組</a>開放申請中！</p>
 
 {% if not fresh %}
 {% if not valid %}
@@ -9,7 +9,7 @@
 </div>
 {% else %}
 <div class="success">
-  <span>Success! You should receive an invite pretty soon.</span>
+  <span>邀請函馬上寄出！請稍候片刻</span>
 </div>
 {% endif %}
 {% endif %}
