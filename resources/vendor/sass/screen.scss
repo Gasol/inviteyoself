@@ -5,20 +5,46 @@
 @import "vendor/normalize/normalize";
 
 body {
-  background-image:url('/img/seamless_paper_texture.png');
+  background: #333 url('http://php.net/images/bg-texture-00.svg');
   background-repeat:repeat;
 }
 
 header {
   text-align: center;
+
+  background: #8892BF;
+  border-bottom: .25em solid currentColor;
+  border-bottom-color: #4F5B93;
+  box-shadow: 0 .25em .25em rgba(0, 0, 0, .1);
+
+  padding: 2em 0;
+
   h1 {
+    color: #EEE;
+    text-shadow: 0 -2.5px 0 rgba(0, 0, 0, 0.25);
     font-size: $base-font-size * 4;
+    margin: 0;
+    vertical-align: middle;
   }
 }
 
 section {
   @include outer-container;
   max-width: em(640);
+
+  p[id="description"] {
+    color: #CCC;
+    margin: .75em 0;
+
+    a {
+      color: #8892BF;
+    }
+  }
+
+  label {
+    color: #CCC;
+    font-weight: bold;
+  }
 
   form {
     @include span-columns(12);
@@ -29,6 +55,10 @@ section {
   //margin-left: auto;
   //margin-right: 0;
   text-align: right;
+
+  input[type="submit"] {
+      background: #4F5B93;
+  }
 }
 
 .error {

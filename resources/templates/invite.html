@@ -1,6 +1,6 @@
 {% extends "templates/base.html" %}
 {% block content %}
-<p>自己的邀請函自己寄，<a href="https://phptw.slack.com/">PHP Taiwan 的 slack 群組</a>開放申請中！</p>
+<p id="description">自己的邀請函自己寄，<a href="https://phptw.slack.com/">PHP Taiwan 的 slack 群組</a>開放申請中！</p>
 
 {% if not fresh %}
 {% if not valid %}
@@ -15,7 +15,7 @@
 {% endif %}
 <form action="/" method="POST">
   <p>
-    <strong>Your Email Address</strong>
+    <label>Your Email Address</label>
     <input type="email" name="email" required placeholder="your email here" {% if not valid %} value={{data.email}} {% endif %}>
   </p>
   <div id="invite_submit">
