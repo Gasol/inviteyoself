@@ -8,3 +8,6 @@ pom.xml
 /.lein-*
 /.env
 *.log
+
+.ruby-version
+.ruby-gemset
