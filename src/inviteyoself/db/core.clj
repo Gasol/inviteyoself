@@ -15,7 +15,8 @@
   (= (:cnt
     (first
       (select invites
-        (where (= :email email))
+        (where (and (= :email email)
+                    (= :invited false)))
         (aggregate (count :*) :cnt)))) 0))
 
 (defn all-not-invited [lmt]
